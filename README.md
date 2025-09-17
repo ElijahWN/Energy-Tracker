@@ -75,24 +75,9 @@ Energy Tracker/
 
 ## Running the App
 
-*   Prerequisites: Node.js 18+ recommended
-
-Install dependencies:
-
 ```bash
-npm install
-```
-
-Start in development mode (with nodemon):
-
-```bash
-npm run dev
-```
-
-Start normally:
-
-```bash
-npm start
+npm i # Install Node.js dependencies
+npm run dev # Start Express server on port 8080
 ```
 
 Server runs on: http://localhost:8080
