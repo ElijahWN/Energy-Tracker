@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   viewBox="0 0 49.999999 36"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="Menu.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.557211"
+     inkscape:cx="-69.033676"
+     inkscape:cy="49.768464"
+     inkscape:window-width="1902"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="matrix(1.1132069,0,0,1.1132069,-99.215739,-70.612999)">
+    <rect
+       style="fill:#000000;stroke-width:0.0957608;stroke-dasharray:none"
+       id="rect4"
+       width="44.915279"
+       height="6.9186373"
+       x="89.126053"
+       y="88.852417"
+       ry="3.4593186"
+       inkscape:label="Bottom" />
+    <rect
+       style="fill:#000000;stroke-width:0.0957608;stroke-dasharray:none"
+       id="rect5"
+       width="44.915279"
+       height="6.9186373"
+       x="89.126053"
+       y="76.142235"
+       ry="3.4593186"
+       inkscape:label="Middle" />
+    <rect
+       style="fill:#000000;stroke-width:0.0957608;stroke-dasharray:none"
+       id="rect3"
+       width="44.915279"
+       height="6.9186373"
+       x="89.126053"
+       y="63.432053"
+       ry="3.4593186"
+       inkscape:label="Top"
+       transform="translate(-3.7429388e-8)" />
+  </g>
+</svg>

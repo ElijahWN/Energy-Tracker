@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/leaderboard.css">
+    <script
+        src="/scripts/NavigationController.mjs"
+        type="module"
+        defer
+    ></script>
+    <script
+        src="/scripts/LeaderboardController.mjs"
+        type="module"
+        defer
+    ></script>
+</head>
+<body>
+    <div class="filter controls">
+        <select id="app-type-filter" class="input">
+            <option value="ANY">Any App</option>
+            <% appTypes.forEach(appType => { %>
+                <option value="<%= appType.name %>">
+                    <%= appType.name %>
+                </option>
+            <% }); %>
+        </select>
+
+        <select id="power-source-filter" class="input">
+            <option value="GREEN" selected>Green Energy</option>
+            <option value="ANY">Any Source</option>
+            <% 
+            const powerSourceTypes = [...new Set(
+                RegionPowerModel.data.flatMap(region => Object.keys(region.powerSources))
+            )];
+            powerSourceTypes.sort();
+            powerSourceTypes.forEach(sourceType => { 
+            %>
+                <option value="<%= sourceType %>"><%= sourceType %></option>
+            <% }); %>
+        </select>
+
+        <select id="value-sort" class="input">
+            <option value="HIGH">Highest</option>
+            <option value="LOW">Lowest</option>
+        </select>
+
+        <select id="region-filter" class="input">
+            <option value="ALL">All Regions</option>
+            <option value="QLD">QLD</option>
+            <option value="NSW">NSW</option>
+            <option value="WA">WA</option>
+            <option value="SA">SA</option>
+            <option value="ACT">ACT</option>
+            <option value="VIC">VIC</option>
+            <option value="TAS">TAS</option>
+            <option value="NT">NT</option>
+        </select>
+    </div>
+
+    <ul id="leaderboard-list" class="leaderboard list">
+        <% locations.sort((prev, curr) => 
+            UtilsController.getLocationPower(curr.appliances) - UtilsController.getLocationPower(prev.appliances)
+        ).forEach(location => { %>
+            <li class="leaderboard card">
+                <div class="leaderboard header">
+                    <h2 class="leaderboard address"><%= location.address %></h2>
+
+                    <button type="button"
+                        class="button red hidden"
+                        id="delete-<%= location.publicId %>">
+                        Delete
+                    </button>
+                </div>
+
+                <div class="leaderboard info">
+                    <span class="leaderboard power text" id="power-<%= location.publicId %>">Total Usage - Not Loaded</span>
+                    <button type="button"
+                        class="button orange"
+                        id="toggle-stats-<%= location.publicId %>">
+                        Show Stats
+                    </button>
+                </div>
+
+                <div id="view-stats-<%= location.publicId %>" class="stats content hidden">
+                    <div class="switch container">
+                        <button type="button"
+                            class="button switch button"
+                            id="select-energy-<%= location.publicId %>">
+                            Energy Type
+                        </button>
+
+                        <button type="button"
+                            class="button switch button selected"
+                            id="select-app-<%= location.publicId %>">
+                            App Type
+                        </button>
+                    </div>
+                    <div class="stats chart container"></div>
+                </div>
+            </li>
+        <% }); %>
+
+        <% if (locations.length === 0 && totalPages > 0) { %>
+            <p class="text center margin top medium">No entries found on this page.</p>
+        <% } else if (locations.length === 0 && totalPages === 0) { %>
+            <p class="text center margin top medium">No entries found in the leaderboard.</p>
+        <% } %>
+    </ul>
+
+    <% if (totalPages > 1) { %>
+        <div id="pagination-controls" class="pagination controls margin top large flex justify center items center gap small">
+            <a href="/leaderboard?page=<%= currentPage - 1 %>"
+                class="button <%= currentPage <= 1 ? 'disabled' : '' %>">
+                Previous
+            </a>
+            <span>Page <%= currentPage %> of <%= totalPages %></span>
+            <a href="/leaderboard?page=<%= currentPage + 1 %>"
+                class="button <%= currentPage >= totalPages ? 'disabled' : '' %>">
+                Next
+            </a>
+        </div>
+    <% } %>
+</body>
+</html>

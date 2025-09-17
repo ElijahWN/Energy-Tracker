@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Location Statistics</title>
+        <link rel="stylesheet" href="/styles/styles.css" />
+        <link rel="stylesheet" href="/styles/locationStatistics.css" />
+        <script
+            src="/scripts/NavigationController.mjs"
+            type="module"
+            defer
+        ></script>
+        <script
+            src="/scripts/LocationStatisticsController.mjs"
+            type="module"
+            defer
+        ></script>
+    </head>
+    <body>
+        <div class="stats header">
+            <a href="/views/LocationListView.html" class="button">Back</a>
+            <h1 id="location-name">Couldn't Load</h1>
+        </div>
+
+        <span id="location-power" class="power badge total usage">
+            Total Usage - Couldn't Load
+        </span>
+
+        <div id="stats-container" class="stats section">
+            <div class="stats chart">
+                <div class="chart header">
+                    <h2>Energy Sources</h2>
+                    <div class="chart toggle">
+                        <button class="button active">Energy Type</button>
+                        <button class="button">App Type</button>
+                    </div>
+                </div>
+                <div class="bar chart"></div>
+            </div>
+        </div>
+    </body>
+</html>

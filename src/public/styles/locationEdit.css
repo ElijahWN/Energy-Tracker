@@ -1,0 +1,158 @@
+@import url("/styles/navigation.css");
+
+.app.container {
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 11fr);
+
+    & > span:not(:first-child) {
+        background-color: var(--color-input-background);
+    }
+}
+
+.edit.header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+.edit.header .button {
+    min-width: 50px;
+    padding: var(--spacing-extra-small) var(--spacing-small);
+}
+
+.edit.header input {
+    flex-grow: 1;
+}
+
+.location.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+}
+
+.location.details {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-small);
+}
+
+.location.details input,
+.location.details select {
+    width: 100%;
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-input-background);
+}
+
+.location.details select {
+    width: auto;
+    min-width: 80px;
+    background-color: var(--color-grey);
+    font-weight: 500;
+}
+
+.button.save {
+    background-color: var(--color-green);
+    width: 100%;
+    padding: var(--spacing-small);
+    font-weight: bold;
+}
+
+.appliance.section {
+    margin-top: var(--spacing-large);
+}
+
+.appliance.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+    margin-top: 1rem;
+}
+
+.appliance.form .input,
+.appliance.form select.input,
+.appliance.form input[type="number"] {
+    padding: var(--spacing-extra-small) var(--spacing-small);
+}
+
+.appliance.form select.input {
+    flex: 2;
+}
+
+.appliance.form .input.group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-extra-small);
+    flex: 1;
+}
+
+.appliance.form .input.group label {
+    white-space: nowrap;
+}
+
+.appliance.form .input.group input {
+    width: 60px;
+    min-width: 40px;
+}
+
+.appliance.form .button {
+    flex: 0 1 auto;
+}
+
+.appliance.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    padding: 0;
+}
+
+.appliance.item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: var(--spacing-small);
+    align-items: center;
+    background-color: var(--color-orange);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-small);
+    border: 1px solid var(--color-border);
+}
+
+.appliance.item span {
+    background-color: var(--color-input-background);
+    padding: var(--spacing-extra-small) var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+}
+
+.appliance.item .button {
+    padding: var(--spacing-extra-small);
+    line-height: 1;
+    min-width: auto;
+    justify-self: end;
+}
+
+.appliance.item .hours.label::after {
+    content: " hr";
+    font-size: 0.8em;
+}
+
+.appliance.item .quantity.label::before {
+    content: "x ";
+    font-size: 0.8em;
+}
+
+.appliance.form .input.group .input.quantity,
+.appliance.form .input.group .input.hours {
+    border: none;
+    background-color: var(--color-input-background);
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-extra-small) var(--spacing-small);
+}

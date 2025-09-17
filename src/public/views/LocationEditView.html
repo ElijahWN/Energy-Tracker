@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edit Location</title>
+        <link rel="stylesheet" href="/styles/styles.css" />
+        <link rel="stylesheet" href="/styles/locationEdit.css" />
+        <script
+            src="/scripts/NavigationController.mjs"
+            type="module"
+            defer
+        ></script>
+        <script
+            src="/scripts/LocationEditController.mjs"
+            type="module"
+            defer
+        ></script>
+    </head>
+    <body>
+        <div class="edit header">
+            <a href="/views/LocationListView.html" class="button">Back</a>
+            <input
+                type="text"
+                id="location-name"
+                placeholder="My Home"
+                class="input flex grow"
+            />
+        </div>
+
+        <div class="location form">
+            <div class="location details">
+                <input
+                    type="text"
+                    id="location-address"
+                    placeholder="123 Example Street"
+                    class="input flex grow"
+                />
+                <select id="location-region" class="input">
+                    <option value="QLD">QLD</option>
+                    <option value="NSW">NSW</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="ACT">ACT</option>
+                    <option value="VIC">VIC</option>
+                    <option value="TAS">TAS</option>
+                    <option value="NT">NT</option>
+                </select>
+            </div>
+
+            <button id="save-location" class="button green save">Save</button>
+        </div>
+
+        <div class="card appliance section">
+            <h2>Appliances</h2>
+            <div class="appliance form flex wrap center">
+                <select id="add-appliance-type" class="input"></select>
+                <div class="input group flex center">
+                    <label for="add-appliance-quantity">Amount:</label>
+                    <input
+                        type="number"
+                        value="1"
+                        step="1"
+                        min="1"
+                        id="add-appliance-quantity"
+                        class="input quantity"
+                    />
+                </div>
+                <div class="input group flex center">
+                    <label for="add-appliance-usage">Hours:</label>
+                    <input
+                        type="number"
+                        value="0"
+                        step=".5"
+                        min="0"
+                        id="add-appliance-usage"
+                        class="input hours"
+                    />
+                </div>
+                <button id="add-appliance" class="button green">Add</button>
+            </div>
+
+            <ul id="appliance-list" class="appliance list"></ul>
+        </div>
+    </body>
+</html>

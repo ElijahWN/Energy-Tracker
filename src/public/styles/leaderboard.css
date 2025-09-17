@@ -1,0 +1,91 @@
+@import url("/styles/navigation.css");
+
+.filter.controls {
+    display: flex;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+.filter.controls select {
+    flex: 1;
+    min-width: 80px;
+    padding: var(--spacing-extra-small) var(--spacing-small);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-input-background);
+}
+
+.leaderboard.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    list-style: none;
+    padding: 0;
+}
+
+.leaderboard.card {
+    padding: var(--spacing-medium);
+    background-color: var(--color-card-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-medium);
+}
+
+.leaderboard.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-medium);
+}
+
+.leaderboard.address {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-right: auto;
+}
+
+.leaderboard.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+    background-color: var(--color-yellow);
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--color-border);
+}
+
+.leaderboard.power.text {
+    font-weight: 500;
+}
+
+.switch.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+.switch.button {
+    background-color: var(--color-grey);
+}
+
+.switch.button.selected {
+    background-color: var(--color-green);
+}
+
+.pagination.controls {
+    width: 100%;
+    margin-top: var(--spacing-large);
+}
+
+.pagination.controls .button.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    background-color: var(--color-navigation-background);
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+.pagination.controls span {
+    font-size: 0.9rem;
+}

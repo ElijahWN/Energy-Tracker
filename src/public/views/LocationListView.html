@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/styles.css" />
+        <link rel="stylesheet" href="/styles/locationList.css" />
+        <script
+            src="/scripts/NavigationController.mjs"
+            type="module"
+            defer
+        ></script>
+        <script
+            src="/scripts/LocationListController.mjs"
+            type="module"
+            defer
+        ></script>
+        <title>My Locations</title>
+    </head>
+    <body>
+        <div class="location header">
+            <input
+                id="create-location-input"
+                type="text"
+                placeholder="My Home"
+                class="input flex grow"
+            />
+            <button id="create-location-button" class="button green">
+                Create
+            </button>
+        </div>
+
+        <input
+            id="search-location"
+            type="text"
+            placeholder="Search"
+            class="input search bar"
+        />
+
+        <div id="locations-container" class="flex column gap medium"></div>
+    </body>
+</html>
