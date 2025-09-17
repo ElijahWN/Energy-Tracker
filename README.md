@@ -76,7 +76,7 @@ Energy Tracker/
 ## Running the App
 
 ```bash
-npm i # Install Node.js dependencies
+npm i # Installs Node.js dependencies
 npm run dev # Start Express server on port 8080
 ```
 
