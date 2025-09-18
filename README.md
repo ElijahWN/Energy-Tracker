@@ -2,6 +2,7 @@
 
 Track household energy usage, compare against others on a public leaderboard, and explore aggregated statistics across regions and appliance types. This app demonstrates a full-stack approach with a Node.js/Express backend, EJS server-side rendering for the leaderboard, and a modern vanilla JS client for a smooth experience in other pages.
 
+
 ## Highlights
 
 *   Personal locations and appliances are stored client-side (localStorage) for quick UX.
