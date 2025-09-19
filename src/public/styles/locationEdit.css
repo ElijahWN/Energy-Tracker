@@ -81,7 +81,8 @@
 }
 
 .appliance.form select.input {
-    flex: 2;
+    flex: 1;
+    min-width: 7rem;
 }
 
 .appliance.form .input.group {

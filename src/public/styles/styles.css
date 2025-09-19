@@ -55,7 +55,7 @@ a {
 
 .container {
     padding: var(--spacing-medium);
-    width: 100%;
+    width: auto;
     max-width: 600px;
     margin: 0 auto;
 }

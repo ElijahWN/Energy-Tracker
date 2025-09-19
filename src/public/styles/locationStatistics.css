@@ -18,7 +18,6 @@
 
 .total.usage {
     display: block;
-    width: 100%;
     padding: var(--spacing-small) var(--spacing-medium);
     text-align: center;
     font-weight: 500;
