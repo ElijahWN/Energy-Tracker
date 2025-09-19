@@ -65,6 +65,9 @@ Energy Tracker/
             *   ApplianceTypeModel.mjs
             *   RegionPowerModel.mjs
             *   UtilsController.mjs - Client utilities: calc + charts
+*   screenshots/ - Screenshots of the website (allows you to view the website without running it locally)
+    *   desktop/ - Screenshots from a desktop device
+    *   mobile/ - Screenshots from a mobile device
 
 ## How It Works
 
