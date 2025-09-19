@@ -21,53 +21,53 @@ This app demonstrates a full-stack approach with a Node.js/Express backend, EJS 
 
 ## Repository layout
 
-Energy Tracker/
-*   package.json
-*   package-lock.json
-*   src/
-    *   server.mjs - Express app entry
-    *   controllers/
-        *   LeaderboardController.mjs - SSR page + JSON endpoints for leaderboard
-        *   LocationsController.mjs - Serves static pages + appliances/region data
-        *   StatisticsController.mjs - Serves public stats page + aggregated data
-    *   routes/
-        *   leaderboard.mjs
-        *   locations.mjs
-        *   statistics.mjs
-    *   models/ - Server-side models (in-memory)
-        *   ServerDataModel.mjs - Base in-memory store utilities
-        *   LeaderboardItemModel.mjs - Public leaderboard entry (server)
-        *   ApplianceModel.mjs - Server-side appliance instance
-        *   ApplianceTypeModel.mjs - Predefined appliance types + watts
-        *   RegionPowerModel.mjs - Per-region energy source mix (percentages)
-        *   UtilsController.mjs - Server-side utilities (calc + charts for SSR)
-    *   views/
-        *   leaderboard.ejs - SSR view for initial leaderboard
-    *   public/
-        *   styles/ - CSS for all pages
-        *   images/
-        *   views/ - Static HTML views
-            *   LocationListView.html
-            *   LocationEditView.html
-            *   LocationStatisticsView.html
-            *   PublicStatisticsView.html
-        *   scripts/ - Client-side controllers and models
-            *   NavigationController.mjs - Header/nav + theme toggle
-            *   LocationListController.mjs - Locations list (create/search/post/delete)
-            *   LocationEditController.mjs - Edit a location + manage appliances
-            *   LocationStatisticsController.mjs (referenced)
-            *   PublicStatisticsController.mjs - Public stats charts
-            *   LeaderboardController.mjs - Client interactions on leaderboard page
-            *   ClientDataModel.mjs - localStorage base model
-            *   LocationModel.mjs - Client-side location model
-            *   SantizedLeaderboardEntryModel.mjs
-            *   ApplianceModel.mjs
-            *   ApplianceTypeModel.mjs
-            *   RegionPowerModel.mjs
-            *   UtilsController.mjs - Client utilities: calc + charts
-*   screenshots/ - Screenshots of the website (allows you to view the website without running it locally)
-    *   desktop/ - Screenshots from a desktop device
-    *   mobile/ - Screenshots from a mobile device
+`Energy Tracker/`
+*   `package.json`
+*   `package-lock.json`
+*   `src/`
+    *   `server.mjs` - Express app entry
+    *   `controllers/`
+        *   `LeaderboardController.mjs` - SSR page + JSON endpoints for leaderboard
+        *   `LocationsController.mjs` - Serves static pages + appliances/region data
+        *   `StatisticsController.mjs` - Serves public stats page + aggregated data
+    *   `routes/`
+        *   `leaderboard.mjs`
+        *   `locations.mjs`
+        *   `statistics.mjs`
+    *   `models/` - Server-side models (in-memory)
+        *   `ServerDataModel.mjs` - Base in-memory store utilities
+        *   `LeaderboardItemModel.mjs` - Public leaderboard entry (server)
+        *   `ApplianceModel.mjs` - Server-side appliance instance
+        *   `ApplianceTypeModel.mjs` - Predefined appliance types + watts
+        *   `RegionPowerModel.mjs` - Per-region energy source mix (percentages)
+        *   `UtilsController.mjs` - Server-side utilities (calc + charts for SSR)
+    *   `views/`
+        *   `leaderboard.ejs` - SSR view for initial leaderboard
+    *   `public/`
+        *   `styles/` - CSS for all pages
+        *   `images/`
+        *   `views/` - Static HTML views
+            *   `LocationListView.html`
+            *   `LocationEditView.html`
+            *   `LocationStatisticsView.html`
+            *   `PublicStatisticsView.html`
+        *   `scripts/` - Client-side controllers and models
+            *   `NavigationController.mjs` - Header/nav + theme toggle
+            *   `LocationListController.mjs` - Locations list (create/search/post/delete)
+            *   `LocationEditController.mjs` - Edit a location + manage appliances
+            *   `LocationStatisticsController.mjs` (referenced)
+            *   `PublicStatisticsController.mjs` - Public stats charts
+            *   `LeaderboardController.mjs` - Client interactions on leaderboard page
+            *   `ClientDataModel.mjs` - localStorage base model
+            *   `LocationModel.mjs` - Client-side location model
+            *   `SantizedLeaderboardEntryModel.mjs`
+            *   `ApplianceModel.mjs`
+            *   `ApplianceTypeModel.mjs`
+            *   `RegionPowerModel.mjs`
+            *   `UtilsController.mjs` - Client utilities: calc + charts
+*   `screenshots/` - Screenshots of the website (allows you to view the website without running it locally)
+    *   `desktop/` - Screenshots from a desktop device
+    *   `mobile/` - Screenshots from a mobile device
 
 ## How It Works
 
